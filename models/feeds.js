@@ -9,3 +9,15 @@ var feeds = [ {
 exports.all = function() {
 	return feeds;
 };
+
+exports.feed = function(id) {
+	for (var i in feeds) {
+		if (feeds.hasOwnProperty(i)) {
+			var feed = feeds[i];
+			if (id === feed.id) {
+				return feed;
+			}
+		}
+	}
+	throw new Error('feed [' + id + '] not found');
+};

@@ -3,12 +3,9 @@ extends layout
 block content
 	h1= title
 
-	table
-		tr
-			th id
-			th url
-		each feed in feeds
-			tr
-				td
-					a(href="feeds/" + feed.id) #{feed.id}
-				td #{feed.url}
+	ul
+	each feed in feeds
+		li
+			a(href="feeds/" + feed.id) #{feed.id}
+		li
+			| #{feed.url}

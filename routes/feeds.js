@@ -5,4 +5,6 @@ var feedsController = require('../controllers/feeds');
 
 router.get('/', feedsController.index);
 
+router.get('/:feedid', feedsController.feedid);
+
 module.exports = router;
