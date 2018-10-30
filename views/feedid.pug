@@ -2,3 +2,10 @@ extends layout
 
 block content
 	h1= title
+
+	dt
+	each item in items
+		dt
+			| #{item.title}
+		dd
+			| #{item.contentSnippet}

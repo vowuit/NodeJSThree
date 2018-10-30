@@ -4,6 +4,12 @@ var feeds = [ {
 }, {
 	id : 'heise',
 	url : 'https://www.heise.de/newsticker/heise-atom.xml'
+}, {
+	id : 'diezeit index',
+	url : 'http://newsfeed.zeit.de/index'
+}, {
+	id : 'diezeit all',
+	url : 'http://newsfeed.zeit.de/all'
 } ];
 
 exports.all = function() {
@@ -11,7 +17,7 @@ exports.all = function() {
 };
 
 exports.feed = function(id) {
-	for (var i in feeds) {
+	for ( var i in feeds) {
 		if (feeds.hasOwnProperty(i)) {
 			var feed = feeds[i];
 			if (id === feed.id) {
